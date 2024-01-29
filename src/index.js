@@ -27,20 +27,6 @@ const headerStyle = {
 
 };
 
-const contentStyle = {
-  textAlign: 'center',
-  minHeight: 120,
-  lineHeight: '120px',
-  color: '#fff',
-  backgroundColor: '#0958d9',
-};
-
-const footerStyle = {
-  textAlign: 'center',
-  color: '#fff',
-  backgroundColor: '#4096ff',
-};
-
 
 
 ReactDOM.render(

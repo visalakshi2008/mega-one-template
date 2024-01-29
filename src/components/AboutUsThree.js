@@ -9,8 +9,10 @@ const AboutUsThree = () => {
     return (
 
         <Row style={{ paddingBlock: "120px" }}>
-
-            <Col span={24} style={{ display: 'flex', justifyContent: 'center' }}>
+            <Col span={24} style={{
+                display: 'flex',
+                justifyContent: 'center'
+            }}>
                 <div style={{ textAlign: 'center' }}>
                     <Typography style={{ fontSize: '18px', color: '#696969' }}>
                         We are megaone company

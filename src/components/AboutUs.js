@@ -6,7 +6,9 @@ import { CodeOutlined, EditOutlined, FolderOutlined, SettingOutlined } from '@an
 const AboutUs = () => {
     return (
         <>
-            <Row style={{ display: "flex", justifyContent: "center", paddingTop: "150px" }}>
+            <Row
+                id="about"
+                style={{ display: "flex", justifyContent: "center", paddingTop: "150px" }}>
                 <Col span={10}>
                     <Typography
                         style={{

@@ -6,7 +6,8 @@ const { TextArea } = Input;
 
 const ContactUs = () => {
     return (
-        <Row gutter={[16, 16]}
+        <Row
+            id="contactUs"
             style={{ display: "flex", justifyContent: "center", paddingBottom: "180px" }}>
 
             <Col span={10} style={{ paddingTop: "120px" }}>

@@ -11,7 +11,12 @@ const { Title } = Typography;
 
 const OurBlog = () => {
     return (
-        <Row style={{ paddingBlock: "120px", display: "flex", justifyContent: "center", textAlign: "center" }}>
+        <Row
+            id="ourBlog"
+            style={{
+                paddingBlock: "120px",
+                display: "flex", justifyContent: "center", textAlign: "center"
+            }}>
             <Col span={24}>
                 <Title style={{ color: "#696969" }}>We are megaone company</Title>
                 <Title style={{ color: "#404854", paddingTop: "10px", paddingBottom: "48px" }}>

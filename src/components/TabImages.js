@@ -14,7 +14,12 @@ import glass from "../images/papercup.jpg"
 const { TabPane } = Tabs;
 
 const App = () => (
-    <Col span={24} style={{ display: "flex", justifyContent: "center", paddingBlock: "120px" }}>
+    <Col span={24}
+        style={{
+            display: "flex", justifyContent: "center",
+            paddingBottom: "100px"
+
+        }}>
         <Tabs defaultActiveKey="graphics" centered>
             <TabPane tab="All" key="graphics">
                 <Image src={image1} preview={false} />

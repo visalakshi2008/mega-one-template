@@ -7,7 +7,7 @@ const { Title } = Typography;
 
 const OurClients = () => {
     return (
-        <Row >
+        <Row id="clients">
             <Col span={24}
                 style={{
                     paddingBlock: "150px",

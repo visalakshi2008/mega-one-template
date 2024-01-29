@@ -4,24 +4,40 @@ import TabImages from './TabImages'
 
 const OurWork = () => {
     return (
-        <Row>
+        <Row id="ourWork">
 
-            <Col span={24} style={{ display: 'flex', justifyContent: 'center', paddingTop: "120px" }}>
+            <Col span={24} style={{
+                display: 'flex',
+                justifyContent: 'center',
+            }}>
                 <div style={{ textAlign: 'center' }}>
-                    <Typography style={{ fontSize: '18px', color: '#696969' }}>
+                    <Typography
+                        style={{ fontSize: '18px', color: '#696969' }}>
                         We are megaone company
                     </Typography>
-                    <Typography style={{ fontSize: "40px", padding: "15px 25px", fontWeight: 700, }}>
-                        We have developed some <br />great projects</Typography>
-                    <Typography style={{ fontSize: '16px', color: '#696969', paddingBottom: '40px' }}>
-                        There are many variations of passages of Lorem Ipsum available,
-                        but the <br />majority have suffered alteration in some form, by injected.
+                    <Typography
+                        style={{
+                            fontSize: "40px", padding: "15px 25px",
+                            fontWeight: 700,
+                        }}>
+                        We have developed some <br />
+                        great projects
+                    </Typography>
+                    <Typography
+                        style={{
+                            fontSize: '16px', color: '#696969',
+                            paddingBottom: '40px'
+                        }}>
+                        There are many variations of passages
+                        of Lorem Ipsum available,
+                        but the <br />majority have suffered
+                        alteration in some form, by injected.
                     </Typography>
                 </div>
             </Col>
-            {/* <Col > */}
+
             <TabImages />
-            {/* </Col> */}
+
         </Row>
     )
 }
