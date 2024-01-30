@@ -18,25 +18,13 @@ import MapSection from './components/MapSection';
 import ContactUs from './components/ContactUs';
 import CustomFooter from './components/CustomFooter';
 
-const headerStyle = {
-  color: '#000',
-  height: "100vh",
-  paddingInline: 48,
-  background: 'linear-gradient(to right, #3264f5 2%, #7004bc 82%)',
-  paddingTop: "30px",
-
-};
-
-
-
 ReactDOM.render(
   <React.StrictMode>
 
     <Layout >
-      <Header style={headerStyle}>
-        <CustomHeader />
-        <HeroSection />
-      </Header>
+
+      <CustomHeader />
+      <HeroSection />
       <AboutUs />
       <AboutUsTwo />
       <AboutUsThree />

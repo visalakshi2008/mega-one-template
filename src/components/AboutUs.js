@@ -8,33 +8,53 @@ const AboutUs = () => {
         <>
             <Row
                 id="about"
-                style={{ display: "flex", justifyContent: "center", paddingTop: "150px" }}>
-                <Col span={10}>
+                style={{
+                    display: "flex", justifyContent: "center",
+
+                    paddingTop: "150px"
+                }}>
+
+                <Col
+                    xl={{ span: 10 }}
+                    lg={{ span: 10 }}
+                    md={{ span: 10 }}
+                    sm={{ span: 24 }}
+                    xs={{ span: 22 }}
+
+                    style={{
+
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        textAlign: "center",
+                    }}
+                >
                     <Typography
                         style={{
                             color: "#696969",
                             fontSize: "18px",
-
-                        }}>
-
+                        }}
+                    >
                         We are megaone company
                     </Typography>
-                    <Typography style={{
-                        fontSize: "10px",
-                        fontSize: "40px",
-                        paddingTop: "15px",
-                        paddingBottom: "25px",
-                        color: "#404854",
-                        fontWeight: 600
-                    }}>
+                    <Typography
+                        style={{
+                            fontSize: "40px",
+                            paddingTop: "15px",
+                            paddingBottom: "25px",
+                            color: "#404854",
+                            fontWeight: 600,
+                        }}
+                    >
                         We are making design
                         <br /> better for everyone
                     </Typography>
                     <Typography
                         style={{
                             color: "#696969",
-                            paddingBottom: "25px"
-                        }}>
+                            paddingBottom: "25px",
+                        }}
+                    >
                         There are many variations of passages of Lorem Ipsum available,
                         but the majority have suffered alteration in some form,
                         by injected humour,
@@ -42,7 +62,6 @@ const AboutUs = () => {
                     </Typography>
                     <Button
                         style={{
-
                             backgroundColor: "#f023b6",
                             border: "none",
                             color: "#fff",
@@ -52,22 +71,45 @@ const AboutUs = () => {
                             alignItems: "center",
                             borderRadius: "20px",
                             fontSize: "14px",
-                            marginTop: "75px"
-                        }}>
+                            marginTop: "65px",
+                        }}
+                    >
                         Learn More
                     </Button>
                 </Col>
-                <Col span={10}>
-                    <Image src={officeImage}
-                        width={540} preview={false} />
-                </Col>
-                <Col span={20} style={{
-                    justifyContent: "center",
-                    display: "flex",
-                    gap: "10%",
-                    paddingBlock: "120px"
 
-                }}>
+                <Col
+                    // span={10}
+                    xl={{ span: 10 }}
+                    lg={{ span: 10 }}
+                    md={{ span: 13 }}
+                    sm={{ span: 24 }}
+                    xs={{ span: 22 }}
+
+                    style={{
+
+                        alignItems: "center",
+                        justifyContent: "center",
+                        display: "flex",
+                        paddingTop: "40px"
+                    }}
+                >
+                    <Image src={officeImage}
+                        width={400} preview={false} />
+                </Col>
+                <Col
+                    xl={{ span: 20 }}
+                    lg={{ span: 20 }}
+                    md={{ span: 20 }}
+                    sm={{ span: 22 }}
+
+                    style={{
+                        justifyContent: "center",
+                        display: "flex",
+                        gap: "10%",
+                        paddingBlock: "120px"
+
+                    }}>
 
                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         <div

@@ -6,7 +6,7 @@ import envanto from "../images/evantoLogo.png";
 import maps from "../images/maps.jpg"
 
 const MapSection = () => {
-    const images = [envanto, envanto, envanto, envanto, envanto, envanto, envanto];
+    const images = [envanto, envanto, envanto, envanto,];
 
     return (
         <>
@@ -15,10 +15,17 @@ const MapSection = () => {
                 display: "flex", alignItems: "center",
                 paddingBottom: "100px"
             }}>
-                <Col span={24} style={{
-                    textAlign: 'center',
-                    gap: "30px", paddingTop: "100px",
-                }}>
+                <Col
+                    xxl={24}
+                    xl={24}
+                    lg={24}
+                    md={24}
+                    sm={24}
+                    xs={24}
+                    style={{
+                        textAlign: 'center',
+                        gap: "30px", paddingTop: "100px",
+                    }}>
                     <Carousel autoplay >
                         {images.map((image, index) => (
                             <div key={index} style={{

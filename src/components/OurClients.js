@@ -8,7 +8,13 @@ const { Title } = Typography;
 const OurClients = () => {
     return (
         <Row id="clients">
-            <Col span={24}
+            <Col
+                xxl={{ span: 24 }}
+                xl={{ span: 24 }}
+                lg={{ span: 24 }}
+                md={{ span: 24 }}
+                sm={{ span: 24 }}
+                xs={{ span: 24 }}
                 style={{
                     paddingBlock: "150px",
                     background: 'linear-gradient(to right, #3264f5 2%, #7004bc 82%)',
@@ -20,12 +26,15 @@ const OurClients = () => {
                     paddingBottom: "20px",
                     fontWeight: 700,
                     color: "#fff"
+
                 }}>
                     Some great words from our <br />clients
                 </Typography>
 
                 <Row style={{ justifyContent: "center", alignItems: "center" }}>
-                    <Col span={8} style={{ textAlign: 'center' }}>
+                    <Col
+                        span={8}
+                        style={{ textAlign: 'center', }}>
                         <Carousel autoplay>
 
                             <div >

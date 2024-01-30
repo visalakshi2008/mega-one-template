@@ -5,8 +5,17 @@ import girlAndBoy from "../images/girlAndBoy.png"
 const AboutUsFour = () => {
     return (
         <>
-            <Row style={{ paddingBlock: "120px", display: "flex", justifyContent: "center" }}>
-                <Col span={10} >
+            <Row style={{ paddingBlock: "120px", display: "flex", justifyContent: "center", }}>
+                <Col
+                    xxl={{ span: 10 }}
+                    xl={{ span: 10 }}
+                    lg={{ span: 9 }}
+                    md={{ span: 10 }}
+
+                    sm={{ span: 22 }}
+                    xs={{ span: 22 }}
+
+                >
                     <Typography
                         style={{
                             color: "#696969",
@@ -49,15 +58,33 @@ const AboutUsFour = () => {
                             alignItems: "center",
                             borderRadius: "20px",
                             fontSize: "14px",
-                            marginTop: "35px"
+                            marginTop: "35px",
+
                         }}>
                         Learn More
                     </Button>
                 </Col>
-                <Col span={10}>
-                    <Image src={girlAndBoy}
-                        width={540} preview={false} />
+
+                <Col
+                    xxl={{ span: 10 }}
+                    xl={{ span: 10 }}
+                    lg={{ span: 14 }}
+                    md={{ span: 13 }}
+                    sm={{ span: 22 }}
+                    xs={{ span: 22 }}
+                    style={{
+
+                        textAlign: "center",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        paddingTop: "40px"
+                    }}
+                >
+                    <Image src={girlAndBoy} width={500} preview={false} />
                 </Col>
+
+
             </Row>
         </>
     )

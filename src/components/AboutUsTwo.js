@@ -6,20 +6,55 @@ import { BookOutlined, GroupOutlined, SettingOutlined, TeamOutlined, UserOutline
 const AboutUsTwo = () => {
     return (
         <Row style={{
-            display: "flex",
+
             justifyContent: "center",
             paddingBlock: "150px",
             backgroundColor: "#03a9f5"
         }}>
-            <Col span={10}>
-                <Image src={boyWithLaptop}
-                    width={540} preview={false} />
+
+            <Col
+                xxl={{ span: 10 }}
+                xl={{ span: 12 }}
+                lg={{ span: 10 }}
+                md={{ span: 23 }}
+                sm={{ span: 20 }}
+                style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+
+
+                }}
+            >
+                <Image
+                    src={boyWithLaptop}
+
+                    width={500}
+                    preview={false}
+                />
             </Col>
-            <Col span={10}>
+
+            <Col
+                xxl={{ span: 14 }}
+                xl={{ span: 12 }}
+                lg={{ span: 12 }}
+                md={{ span: 20 }}
+                sm={{ span: 20 }}
+                style={{
+
+                    justifyContent: "center",
+                    alignItems: "center",
+                    paddingTop: "30px"
+
+
+
+                }}
+            >
                 <Typography
                     style={{
                         color: "#fff",
                         fontSize: "18px",
+                        textAlign: "center"
 
                     }}>
 
@@ -32,7 +67,8 @@ const AboutUsTwo = () => {
                     paddingBottom: "25px",
                     color: "#fff",
                     lineHeight: "50px",
-                    fontWeight: 600
+                    fontWeight: 600,
+                    textAlign: "center"
                 }}>
                     We have done some<br /> great idea.
                 </Typography>
@@ -40,18 +76,36 @@ const AboutUsTwo = () => {
                     style={{
                         color: "#fff",
                         paddingBottom: "25px",
-                        fontSize: "16px"
+                        fontSize: "16px",
+                        textAlign: "center",
+                        paddingLeft: "10px"
+
                     }}>
-                    There are many variations of passages of Lorem Ipsum available,
+                    There are many variations of passages of Lorem Ipsum available,<br />
                     but the majority have suffered alteration in some form, by injected.
                 </Typography>
 
-                <Row>
-                    <Col span={20} style={{ display: "flex", justifyContent: "space-between" }}>
+                <Row
+                    style={{
+
+                        display: "flex",
+                        justifyContent: "center"
+                    }}>
+                    <Col
+                        xl={{ span: 15 }}
+                        lg={{ span: 20 }}
+                        md={{ span: 20 }}
+
+                        style={{
+                            display: "flex",
+                            justifyContent: "space-between",
+
+
+                        }}>
                         <div>
-                            <TeamOutlined style={{ color: "#fff", fontSize: "40px", fontWeight: 600 }} />
-                            <Typography style={{ color: "#fff", fontSize: "32px", fontWeight: 600 }}>500+</Typography>
-                            <Typography style={{ color: "#fff", fontSize: "16px" }}>Happy Clients</Typography>
+                            <TeamOutlined style={{ color: "#fff", fontSize: "40px", fontWeight: 600, }} />
+                            <Typography style={{ color: "#fff", fontSize: "32px", fontWeight: 600, }}>500+</Typography>
+                            <Typography style={{ color: "#fff", fontSize: "16px", }}>Happy Clients</Typography>
 
                         </div>
                         <div>
@@ -62,7 +116,7 @@ const AboutUsTwo = () => {
                         </div> <div>
                             <SettingOutlined style={{ color: "#fff", fontSize: "40px", fontWeight: 600 }} />
                             <Typography style={{ color: "#fff", fontSize: "32px", fontWeight: 600 }}>600+</Typography>
-                            <Typography style={{ color: "#fff", fontSize: "16px" }}>Projected Completed</Typography>
+                            <Typography style={{ color: "#fff", fontSize: "16px", textAlign: "center" }}>Projected Completed</Typography>
 
                         </div>
                     </Col>

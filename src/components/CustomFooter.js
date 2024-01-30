@@ -6,8 +6,14 @@ const CustomFooter = () => {
     return (
         <Row>
             <Col
-                span={12} style={{ justifyContent: "center", display: "flex" }}>
-                <div style={{ display: "flex", gap: "40px" }}>
+                xxl={12}
+                xl={12}
+                lg={11}
+                md={11}
+                sm={24}
+                xs={24}
+                style={{ justifyContent: "center", display: "flex" }}>
+                <div style={{ display: "flex", gap: "20px" }}>
 
                     <FacebookFilled />
                     <TwitterOutlined />
@@ -19,8 +25,15 @@ const CustomFooter = () => {
 
             </Col>
 
-            <Col span={8} style={{ textAlign: 'end' }}>
-                <Typography>
+            <Col
+                xxl={8}
+                xl={8}
+                lg={11}
+                md={11}
+                sm={24}
+                xs={24}
+                style={{ textAlign: 'center' }}>
+                <Typography style={{ paddingTop: "20px" }}>
                     © 2023 MegaOne. Made With Love By Themesindustry
                 </Typography>
             </Col>

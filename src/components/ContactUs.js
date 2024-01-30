@@ -10,7 +10,14 @@ const ContactUs = () => {
             id="contactUs"
             style={{ display: "flex", justifyContent: "center", paddingBottom: "180px" }}>
 
-            <Col span={10} style={{ paddingTop: "120px" }}>
+            <Col
+                xxl={10}
+                xl={12}
+                lg={11}
+                md={11}
+                sm={22}
+                xs={20}
+                style={{ paddingTop: "120px" }}>
                 <Form layout='vertical'>
                     <Typography style={{
                         paddingBottom: "25px",
@@ -79,8 +86,20 @@ const ContactUs = () => {
             </Col>
 
 
-            <Col span={7} style={{ paddingTop: "120px" }}>
-                <div style={{ paddingLeft: "30px", paddingRight: "30px" }}>
+            <Col
+                xxl={7}
+                xl={9}
+                lg={11}
+                md={11}
+                sm={22}
+                xs={20}
+                style={{ paddingTop: "120px", }}>
+                <div
+                    style={{
+                        paddingLeft: "30px",
+                        paddingRight: "30px", justifyContent: "center",
+                        alignItems: "center"
+                    }}>
                     <Typography style={{
                         paddingBottom: "25px",
                         fontSize: "40px", fontWeight: 700,

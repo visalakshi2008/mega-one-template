@@ -14,39 +14,66 @@ import glass from "../images/papercup.jpg"
 const { TabPane } = Tabs;
 
 const App = () => (
-    <Col span={24}
+    <Col
+        xxl={{ span: 24 }}
+        xl={{ span: 24 }}
+        lg={{ span: 24 }}
+        md={{ span: 24 }}
+        sm={{ span: 24 }}
+        xs={{ span: 24 }}
         style={{
-            display: "flex", justifyContent: "center",
-            paddingBottom: "100px"
+            display: "flex",
+            justifyContent: "center",
+            paddingBottom: "100px",
+
+            textAlign: "center"
 
         }}>
         <Tabs defaultActiveKey="graphics" centered>
-            <TabPane tab="All" key="graphics">
-                <Image src={image1} preview={false} />
-                <Image src={coffeeCup} preview={false} />
-                <div>
+            <TabPane tab="All" key="graphics" >
+                <Image src={glass} preview={false} width={300} />
+                <Image src={cupcake} preview={false} />
+                <Image src={coffeeCup} preview={false} width={300} />
+                <Image src={blackImage} preview={false} width={300} />
+                <Image src={paperrocket} preview={false} width={300} />
+                <Image src={clock} preview={false} width={300} />
 
-                    <Image src={paperrocket} preview={false} />
-                    <Image src={clock} preview={false} width={300} />
-                    <Image src={blackImage} />
-                </div>
-                <div>
-                    <Image src={bulb} preview={false} width={900} />
 
-                </div>
+
+
 
             </TabPane>
             <TabPane tab="Graphic Design" key="all">
-                Content of Graphic Design
+                <Image src={blackImage} preview={false} width={300} />
+                <Image src={glass} preview={false} width={300} />
+                <Image src={paperrocket} preview={false} width={300} />
+                <Image src={coffeeCup} preview={false} width={300} />
+                <Image src={clock} preview={false} width={300} />
+                <Image src={cupcake} preview={false} />
             </TabPane>
             <TabPane tab="Web Design" key="marketing">
-                Content of Web Design
+                <Image src={coffeeCup} preview={false} width={300} />
+                <Image src={glass} preview={false} width={300} />
+                <Image src={blackImage} preview={false} width={300} />
+                <Image src={clock} preview={false} width={300} />
+                <Image src={paperrocket} preview={false} width={300} />
+                <Image src={cupcake} preview={false} />
             </TabPane>
             <TabPane tab="SEO" key="design">
-                Content of SEO Tab
+                <Image src={glass} preview={false} width={300} />
+                <Image src={blackImage} preview={false} width={300} />
+                <Image src={coffeeCup} preview={false} width={300} />
+                <Image src={clock} preview={false} width={300} />
+                <Image src={cupcake} preview={false} />
+                <Image src={paperrocket} preview={false} width={300} />
             </TabPane>
             <TabPane tab="Marketing" key="seo">
-                Content of Marketing Tab
+                <Image src={coffeeCup} preview={false} width={300} />
+                <Image src={glass} preview={false} width={300} />
+                <Image src={paperrocket} preview={false} width={300} />
+                <Image src={blackImage} preview={false} width={300} />
+                <Image src={clock} preview={false} width={300} />
+                <Image src={cupcake} preview={false} />
             </TabPane>
         </Tabs>
     </Col>
