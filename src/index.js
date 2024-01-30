@@ -24,17 +24,20 @@ ReactDOM.render(
     <Layout >
 
       <CustomHeader />
-      <HeroSection />
-      <AboutUs />
-      <AboutUsTwo />
-      <AboutUsThree />
-      <AboutUsFour />
-      <OurWork />
-      <OurClients />
-      <OurBlog />
-      <MapSection />
-      <ContactUs />
-      <CustomFooter />
+      <div style={{ paddingTop: "64px" }}>
+
+        <HeroSection />
+        <AboutUs />
+        <AboutUsTwo />
+        <AboutUsThree />
+        <AboutUsFour />
+        <OurWork />
+        <OurClients />
+        <OurBlog />
+        <MapSection />
+        <ContactUs />
+        <CustomFooter />
+      </div>
     </Layout>
   </React.StrictMode>,
   document.getElementById('root')

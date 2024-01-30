@@ -10,7 +10,6 @@ const AboutUs = () => {
                 id="about"
                 style={{
                     display: "flex", justifyContent: "center",
-
                     paddingTop: "150px"
                 }}>
 
@@ -79,7 +78,7 @@ const AboutUs = () => {
                 </Col>
 
                 <Col
-                    // span={10}
+
                     xl={{ span: 10 }}
                     lg={{ span: 10 }}
                     md={{ span: 13 }}

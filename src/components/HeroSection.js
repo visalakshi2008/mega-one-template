@@ -12,7 +12,8 @@ const HeroSection = () => {
                 style={{
                     justifyContent: "center",
                     alignItems: "center",
-                    backgroundColor: "#000",
+                    background: 'linear-gradient(to right, #3264f5 2%, #7004bc 82%)',
+
                 }}>
                 <Col
                     xxl={{ span: 12 }}
@@ -57,7 +58,6 @@ const HeroSection = () => {
                     style={{
 
                         justifyContent: "start",
-
                         display: "flex",
                         flexDirection: "column",
                         alignItems: "center",
