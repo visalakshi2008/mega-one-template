@@ -1,17 +1,49 @@
 import React, { useState } from 'react';
-import { Button, Col, Image, Row, Drawer, } from 'antd';
+import { Button, Col, Image, Row, Drawer, Modal, Typography, Input, Form, Checkbox } from 'antd';
 import { Link } from 'react-scroll';
 import logo from "../images/logo.png";
 import { FacebookFilled, InstagramFilled, MenuOutlined, TwitterSquareFilled } from '@ant-design/icons';
 import { useMediaQuery } from 'react-responsive';
+import TextArea from 'antd/es/input/TextArea';
 
 const CustomHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isSmallScreen = useMediaQuery({ maxWidth: 756 });
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { TextArea } = Input;
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
 
   const handleMenuClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const onChange = (e) => {
+    console.log(`checked = ${e.target.checked}`);
+  };
+  const closeIcon = (
+    <div
+      style={{
+        backgroundColor: '#f023b6',
+        borderRadius: '50%',
+        padding: "8px",
+
+        cursor: 'pointer'
+      }}>
+      <Typography
+        style={{
+          justifyContent: "center",
+          color: "#fff",
+          fontSize: "15px"
+        }}>X</Typography>
+    </div>
+  );
 
   return (
     <>
@@ -104,17 +136,146 @@ const CustomHeader = () => {
                 style={{ color: '#fff', fontFamily: 'sans-serif' }}>
                 Contact Us
               </Link>
-              <Button
+
+              <Button onClick={showModal}
                 style={{
                   backgroundColor: 'transparent',
                   color: '#fff',
                   fontFamily: 'sans-serif',
                   borderRadius: '20px',
                   padding: '5px 20px',
-                }}
-              >
+                }}>
                 Get A Quote
               </Button>
+
+              <Modal
+                visible={isModalOpen}
+                onOk={handleOk}
+                onCancel={handleCancel}
+                closeIcon={closeIcon}
+                width={1200}
+              >
+
+                <Row gutter={[16, 16]} justify="center">
+                  <Col
+                    span={24}
+                    style={{ textAlign: 'center' }}>
+                    <Typography style={{ color: '#696969', fontSize: '18px' }}>We are megaone company</Typography>
+                    <Typography style={{ color: '#404854', fontSize: '40px' }}>Let's Start Your Website</Typography>
+                  </Col>
+                  <Col span={10}
+                    // xxl={24}
+                    // xl={24}
+                    // lg={24}
+                    // md={24}
+                    // sm={24}
+                    // xs={24}
+                    justify="center">
+                    <Form layout="vertical">
+                      <Form.Item >
+                        <Input
+                          placeholder="Name"
+                          style={{
+                            borderLeft: 'none',
+                            borderRight: 'none',
+                            borderTop: 'none',
+                          }}
+                        />
+                      </Form.Item>
+                    </Form>
+                  </Col>
+                  <Col span={10} justify="center">
+                    <Form layout="vertical">
+                      <Form.Item >
+                        <Input
+                          placeholder="Email"
+                          style={{
+                            borderLeft: 'none',
+                            borderRight: 'none',
+                            borderTop: 'none',
+                          }}
+                        />
+                      </Form.Item>
+                    </Form>
+                  </Col>
+                  <Col span={10} justify="center">
+                    <Form layout="vertical">
+                      <Form.Item >
+                        <Input
+                          placeholder="Contact#"
+                          style={{
+                            borderLeft: 'none',
+                            borderRight: 'none',
+                            borderTop: 'none',
+                          }}
+                        />
+                      </Form.Item>
+                    </Form>
+                  </Col>
+                  <Col span={10} justify="center">
+                    <Form layout="vertical">
+                      <Form.Item >
+                        <Input
+                          placeholder="City/Company"
+                          style={{
+                            borderLeft: 'none',
+                            borderRight: 'none',
+                            borderTop: 'none',
+                          }}
+                        />
+                      </Form.Item>
+                    </Form>
+                  </Col>
+                  <Col span={10} justify="center">
+                    <Form layout="vertical">
+                      <Form.Item >
+                        <Input
+                          placeholder="Project Type"
+                          style={{
+                            borderLeft: 'none',
+                            borderRight: 'none',
+                            borderTop: 'none',
+                          }}
+                        />
+                      </Form.Item>
+                    </Form>
+                  </Col>
+                  <Col span={10} justify="center">
+                    <Form layout="vertical">
+                      <Form.Item >
+                        <Input
+                          placeholder="Budget"
+                          style={{
+                            borderLeft: 'none',
+                            borderRight: 'none',
+                            borderTop: 'none',
+                          }}
+                        />
+                      </Form.Item>
+                    </Form>
+                  </Col>
+                  <Col span={20} justify="center">
+                    <TextArea placeholder='textarea' />
+                  </Col>
+                  <Col span={20} align="center">
+                    <Checkbox onChange={onChange}>Contact by hone ins preffered</Checkbox>
+                  </Col>
+                  <Col span={20} align="center">
+                    <Button type='primary'
+                      style={{
+                        paddingBlock: "25px",
+                        justifyContent: "center",
+                        display: "flex",
+                        alignItems: "center",
+                        borderRadius: "30px",
+                        paddingLeft: "40px",
+                        paddingRight: "40px"
+                      }}>Send Message</Button>
+                  </Col>
+                </Row>
+
+              </Modal>
+
               <FacebookFilled style={{ color: "#fff", fontFamily: "sans-serif" }} />
               <InstagramFilled style={{ color: "#fff", fontFamily: "sans-serif" }} />
               <TwitterSquareFilled style={{ color: "#fff", fontFamily: "sans-serif" }} />
@@ -122,7 +283,7 @@ const CustomHeader = () => {
           </Col>
         )}
 
-      </Row>
+      </Row >
 
       <Drawer
         title="Menu"
@@ -166,6 +327,7 @@ const CustomHeader = () => {
           </div>
         </div>
       </Drawer >
+
     </>
   );
 };
