@@ -1,0 +1,10 @@
+.flipTransition {
+  display: inline-block;
+  perspective: 1000px;
+}
+
+.flipTransition:hover,
+.flipTransition.flip {
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
+}

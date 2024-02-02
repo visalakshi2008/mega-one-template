@@ -1,9 +1,31 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import { Button, Col, Image, Row, Typography } from 'antd'
 import officeImage from "../images/officer-image.png"
 import { CodeOutlined, EditOutlined, FolderOutlined, SettingOutlined } from '@ant-design/icons'
+import customStyles from "../styles/customStyle.module.css"
+import AOS from "aos";
+import "aos/dist/aos.css"
 
 const AboutUs = () => {
+    useEffect(() => {
+        AOS.init({ duration: 1000, easing: "ease-in-out" })
+    }, [])
+    const [designText, setDesignText] = useState('Ideas');
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setDesignText((prevText) => (prevText === 'Ideas' ? 'Designs' : 'Ideas'));
+        }, 3000);
+
+        return () => clearInterval(intervalId);
+    }, []);
+
+    function GetRandomDesignText() {
+        const designTexts = ['Creative', 'Innovative', 'Inspiring', 'Unique'];
+        const randomIndex = Math.floor(Math.random() * designTexts.length);
+        return designTexts[randomIndex];
+    }
+
     return (
         <>
             <Row
@@ -19,6 +41,7 @@ const AboutUs = () => {
                     md={{ span: 10 }}
                     sm={{ span: 24 }}
                     xs={{ span: 22 }}
+                    data-aos="fade-right"
 
                     style={{
 
@@ -38,14 +61,18 @@ const AboutUs = () => {
                     </Typography>
                     <Typography
                         style={{
-                            fontSize: "40px",
-                            paddingTop: "15px",
-                            paddingBottom: "25px",
-                            color: "#404854",
+                            fontSize: '40px',
+                            paddingTop: '15px',
+                            paddingBottom: '25px',
+                            color: '#404854',
                             fontWeight: 600,
                         }}
                     >
-                        We are making design
+                        We are making
+                        <span key={designText} className={customStyles.flipTransition}
+                            style={{ color: "#f023b6", paddingLeft: "10px" }}>
+                            {designText}
+                        </span>
                         <br /> better for everyone
                     </Typography>
                     <Typography
@@ -94,6 +121,7 @@ const AboutUs = () => {
                     }}
                 >
                     <Image src={officeImage}
+                        data-aos="fade-left"
                         width={400} preview={false} />
                 </Col>
                 <Col
@@ -101,7 +129,7 @@ const AboutUs = () => {
                     lg={{ span: 20 }}
                     md={{ span: 20 }}
                     sm={{ span: 22 }}
-
+                    data-aos="fade-up"
                     style={{
                         justifyContent: "center",
                         display: "flex",

@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Col, Image, Row, Typography } from 'antd'
 import team1 from "../images/team1.png"
 import team2 from "../images/team2.png"
 import team3 from "../images/team3.png"
 import { FacebookFilled, LinkedinOutlined, TwitterOutlined } from '@ant-design/icons'
+import AOS from "aos";
+import "aos/dist/aos.css"
 
 const AboutUsThree = () => {
+    useEffect(() => {
+        AOS.init({ duration: 1000, easing: "ease-in-out" })
+    }, [])
     return (
 
         <Row style={{ paddingBlock: "120px" }}>
@@ -43,12 +48,13 @@ const AboutUsThree = () => {
                 xs={{ span: 24 }}
                 style={{
                     display: 'flex',
-
                     margin: "auto",
                     justifyContent: "space-between",
 
-                }}>
-                <div style={{ textAlign: 'center', }}>
+                }}
+
+            >
+                <div style={{ textAlign: 'center', }} data-aos="fade-up">
                     <Image src={team1} preview={false} width={160} style={{ paddingBottom: "40px" }} />
                     <Typography style={{ fontSize: "24px", fontFamily: "sans-serif", paddingBlock: "8px" }}>Visala</Typography>
                     <Typography style={{ fontSize: "16px", paddingBlock: "12px", color: "#696969" }}>Director</Typography>
@@ -58,7 +64,7 @@ const AboutUsThree = () => {
                         <TwitterOutlined />
                     </div>
                 </div>
-                <div style={{ textAlign: 'center', }}>
+                <div style={{ textAlign: 'center', }} data-aos="fade-up">
                     <Image src={team2} preview={false} width={160} style={{ paddingBottom: "40px" }} />
                     <Typography style={{ fontSize: "24px", fontFamily: "sans-serif", paddingBlock: "8px" }}>Natalie Roy</Typography>
                     <Typography style={{ fontSize: "16px", paddingBlock: "12px", color: "#696969" }}>Director</Typography>
@@ -68,7 +74,7 @@ const AboutUsThree = () => {
                         <TwitterOutlined />
                     </div>
                 </div>
-                <div style={{ textAlign: 'center', }}>
+                <div style={{ textAlign: 'center', }} data-aos="fade-up">
                     <Image src={team3} preview={false} width={160} style={{ paddingBottom: "40px" }} />
                     <Typography style={{ fontSize: "24px", fontFamily: "sans-serif", paddingBlock: "8px" }}>John work</Typography>
                     <Typography style={{ fontSize: "16px", paddingBlock: "12px", color: "#696969" }}>Director</Typography>
@@ -79,9 +85,7 @@ const AboutUsThree = () => {
                     </div>
                 </div>
             </Col>
-
-
-        </Row>
+        </Row >
 
     )
 }

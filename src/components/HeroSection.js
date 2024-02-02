@@ -13,6 +13,7 @@ const HeroSection = () => {
                     justifyContent: "center",
                     alignItems: "center",
                     background: 'linear-gradient(to right, #3264f5 2%, #7004bc 82%)',
+                    height: "100vh"
 
                 }}>
                 <Col
@@ -119,9 +120,8 @@ const HeroSection = () => {
                 </Col>
 
 
-            </Row>
-            <Row >
-                <Col Col span={24}
+                <Col
+                    Col span={12}
                     style={{
                         justifyContent: "center",
                         display: "flex", textAlign: "center"
@@ -131,14 +131,27 @@ const HeroSection = () => {
                             color: "#fff",
                             cursor: "pointer",
                             fontSize: "10px",
-                            paddingTop: "72px",
+                            // paddingTop: "72px",
 
                         }}>
                         Scroll Down <ArrowDownOutlined
                             style={{ color: "#fff" }} />
                     </Typography>
                 </Col>
+
+                <Col span={11} style={{ display: 'flex', justifyContent: 'flex-end', }}>
+                    <ArrowDownOutlined style={{
+                        alignSelf: 'flex-end', color: "#fff", fontSize: "30px",
+                        cursor: "pointer"
+
+
+
+                    }} smooth={true} duration={500} />
+                </Col>
+
             </Row>
+            {/* <Row > */}
+            {/* </Row> */}
         </>
     )
 }

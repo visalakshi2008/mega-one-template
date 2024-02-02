@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Button, Col, Image, Row, Typography } from 'antd'
 import girlAndBoy from "../images/girlAndBoy.png"
+import AOS from 'aos'
+import "aos/dist/aos.css"
 
 const AboutUsFour = () => {
+    useEffect(() => {
+        AOS.init({ duration: 1000, easing: "ease-in-out" })
+    }, [])
     return (
         <>
             <Row style={{ paddingBlock: "120px", display: "flex", justifyContent: "center", }}>
@@ -14,7 +19,7 @@ const AboutUsFour = () => {
 
                     sm={{ span: 22 }}
                     xs={{ span: 22 }}
-
+                    data-aos="fade-right"
                 >
                     <Typography
                         style={{
@@ -80,6 +85,7 @@ const AboutUsFour = () => {
                         justifyContent: "center",
                         paddingTop: "40px"
                     }}
+                    data-aos="fade-left"
                 >
                     <Image src={girlAndBoy} width={500} preview={false} />
                 </Col>

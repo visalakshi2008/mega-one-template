@@ -31,7 +31,7 @@ const CustomFooter = () => {
                 lg={11}
                 md={11}
                 sm={24}
-                xs={24}
+                xs={24 }
                 style={{ textAlign: 'center' }}>
                 <Typography style={{ paddingTop: "20px" }}>
                     © 2023 MegaOne. Made With Love By Themesindustry

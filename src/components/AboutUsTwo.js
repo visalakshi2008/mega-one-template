@@ -27,6 +27,7 @@ const AboutUsTwo = () => {
                 }}
             >
                 <Image
+                    data-aos="fade-left"
                     src={boyWithLaptop}
 
                     width={500}
@@ -46,9 +47,8 @@ const AboutUsTwo = () => {
                     alignItems: "center",
                     paddingTop: "30px"
 
-
-
                 }}
+                data-aos="fade-right"
             >
                 <Typography
                     style={{
