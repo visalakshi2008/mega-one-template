@@ -1,10 +1,12 @@
 import { FacebookFilled, GooglePlusCircleFilled, InstagramOutlined, LinkedinOutlined, PrinterOutlined, TwitterOutlined } from '@ant-design/icons'
 import { Col, Row, Typography } from 'antd'
-import React from 'react'
+import React, { useEffect } from 'react'
+
 
 const CustomFooter = () => {
+
     return (
-        <Row>
+        <Row >
             <Col
                 xxl={12}
                 xl={12}
@@ -31,7 +33,7 @@ const CustomFooter = () => {
                 lg={11}
                 md={11}
                 sm={24}
-                xs={24 }
+                xs={24}
                 style={{ textAlign: 'center' }}>
                 <Typography style={{ paddingTop: "20px" }}>
                     © 2023 MegaOne. Made With Love By Themesindustry
